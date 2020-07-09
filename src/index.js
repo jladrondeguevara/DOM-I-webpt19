@@ -58,3 +58,16 @@ slogan.textContent = siteContent['cta']['h1'];
 
 const btnContent = document.querySelector("button");
 btnContent.textContent = siteContent['cta']['button'];
+
+const h4Titles = document.getElementsByTagName("h4");
+
+// for(let i = 0; i < h4Titles.length; i++){
+//   h4Titles[i].textContent = siteContent
+// }
+
+h4Titles[0].textContent = siteContent["main-content"]["features-h4"];
+h4Titles[1].textContent = siteContent["main-content"]["about-h4"];
+h4Titles[2].textContent = siteContent["main-content"]["services-h4"];
+h4Titles[3].textContent = siteContent["main-content"]["product-h4"];
+h4Titles[4].textContent = siteContent["main-content"]["vision-h4"];
+h4Titles[5].textContent = siteContent["contact"]["contact-h4"];
