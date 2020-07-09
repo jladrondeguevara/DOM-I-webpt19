@@ -1,11 +1,13 @@
 const siteContent = {
   "nav": {
-    "nav-item-1": "Services",
-    "nav-item-2": "Product",
-    "nav-item-3": "Vision",
-    "nav-item-4": "Features",
-    "nav-item-5": "About",
-    "nav-item-6": "Contact",
+    "nav-item-1": "Register",
+    "nav-item-2": "Services",
+    "nav-item-3": "Product",
+    "nav-item-4": "Vision",
+    "nav-item-5": "Features",
+    "nav-item-6": "About",
+    "nav-item-7": "Contact",
+    "nav-item-8": "Feedback"
   },
   "cta": {
     "h1": "DOM Is Awesome",
@@ -42,3 +44,51 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["img"]["logo-img"])
+
+
+
+const registerLink = document.createElement("a");
+const feedbackLink = document.createElement("a");
+const nav = document.querySelector("nav");
+nav.appendChild(registerLink);
+nav.prepend(feedbackLink);
+
+
+
+const links = document.getElementsByTagName("a");
+for(let i = 0; i < links.length; i++)
+{
+  links[i].textContent = siteContent['nav'][`nav-item-${i+1}`];
+  links[i].style.color = 'green';
+}
+
+const image = document.getElementById("cta-img");
+image.setAttribute("src", siteContent['img']['header-img']);
+
+const slogan = document.querySelector("h1");
+slogan.textContent = siteContent['cta']['h1'];
+
+const btnContent = document.querySelector("button");
+btnContent.textContent = siteContent['cta']['button'];
+
+const h4Titles = document.getElementsByTagName("h4");
+h4Titles[0].textContent = siteContent["main-content"]["features-h4"];
+h4Titles[1].textContent = siteContent["main-content"]["about-h4"];
+h4Titles[2].textContent = siteContent["main-content"]["services-h4"];
+h4Titles[3].textContent = siteContent["main-content"]["product-h4"];
+h4Titles[4].textContent = siteContent["main-content"]["vision-h4"];
+h4Titles[5].textContent = siteContent["contact"]["contact-h4"];
+
+const parContent = document.getElementsByTagName("p");
+parContent[0].textContent = siteContent["main-content"]["features-content"];
+parContent[1].textContent = siteContent["main-content"]["about-content"];
+parContent[2].textContent = siteContent["main-content"]["services-content"];
+parContent[3].textContent = siteContent["main-content"]["product-content"];
+parContent[4].textContent = siteContent["main-content"]["vision-content"];
+parContent[5].textContent = siteContent["contact"]["address"];
+parContent[6].textContent = siteContent["contact"]["phone"];
+parContent[7].textContent = siteContent["contact"]["email"];
+parContent[8].textContent = siteContent["footer"]["copyright"];
+
+const midPageImg = document.getElementById("middle-img");
+midPageImg.setAttribute("src", siteContent["img"]["mid-page-img"]);
