@@ -76,6 +76,7 @@ parContent[4].textContent = siteContent["main-content"]["vision-content"];
 parContent[5].textContent = siteContent["contact"]["address"];
 parContent[6].textContent = siteContent["contact"]["phone"];
 parContent[7].textContent = siteContent["contact"]["email"];
+parContent[8].textContent = siteContent["footer"]["copyright"];
 
 const midPageImg = document.getElementById("middle-img");
 midPageImg.setAttribute("src", siteContent["img"]["mid-page-img"]);
