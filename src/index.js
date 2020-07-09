@@ -1,11 +1,13 @@
 const siteContent = {
   "nav": {
-    "nav-item-1": "Services",
-    "nav-item-2": "Product",
-    "nav-item-3": "Vision",
-    "nav-item-4": "Features",
-    "nav-item-5": "About",
-    "nav-item-6": "Contact",
+    "nav-item-1": "Register",
+    "nav-item-2": "Services",
+    "nav-item-3": "Product",
+    "nav-item-4": "Vision",
+    "nav-item-5": "Features",
+    "nav-item-6": "About",
+    "nav-item-7": "Contact",
+    
   },
   "cta": {
     "h1": "DOM Is Awesome",
@@ -45,9 +47,13 @@ logo.setAttribute('src', siteContent["img"]["logo-img"])
 
 
 const links = document.getElementsByTagName("a");
+const registerLink = document.createElement("a");
+const nav = document.querySelector("nav");
+nav.appendChild(registerLink);
+console.log(nav);
 for(let i = 0; i < links.length; i++)
 {
-  links[i].textContent = siteContent['nav'][`nav-item-${i}`];
+  links[i].textContent = siteContent['nav'][`nav-item-${i+1}`];
 }
 
 const image = document.getElementById("cta-img");
