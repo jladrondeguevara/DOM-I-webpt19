@@ -77,4 +77,5 @@ parContent[5].textContent = siteContent["contact"]["address"];
 parContent[6].textContent = siteContent["contact"]["phone"];
 parContent[7].textContent = siteContent["contact"]["email"];
 
-
+const midPageImg = document.getElementById("middle-img");
+midPageImg.setAttribute("src", siteContent["img"]["mid-page-img"]);
