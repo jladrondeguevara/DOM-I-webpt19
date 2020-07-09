@@ -7,7 +7,7 @@ const siteContent = {
     "nav-item-5": "Features",
     "nav-item-6": "About",
     "nav-item-7": "Contact",
-    
+    "nav-item-8": "Feedback"
   },
   "cta": {
     "h1": "DOM Is Awesome",
@@ -46,11 +46,14 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["img"]["logo-img"])
 
 
-const links = document.getElementsByTagName("a");
+
 const registerLink = document.createElement("a");
+const feedbackLink = document.createElement("a");
 const nav = document.querySelector("nav");
 nav.appendChild(registerLink);
-console.log(nav);
+nav.prepend(feedbackLink);
+
+const links = document.getElementsByTagName("a");
 for(let i = 0; i < links.length; i++)
 {
   links[i].textContent = siteContent['nav'][`nav-item-${i+1}`];
