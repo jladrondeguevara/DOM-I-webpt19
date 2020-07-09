@@ -53,10 +53,13 @@ const nav = document.querySelector("nav");
 nav.appendChild(registerLink);
 nav.prepend(feedbackLink);
 
+
+
 const links = document.getElementsByTagName("a");
 for(let i = 0; i < links.length; i++)
 {
   links[i].textContent = siteContent['nav'][`nav-item-${i+1}`];
+  links[i].style.color = 'green';
 }
 
 const image = document.getElementById("cta-img");
